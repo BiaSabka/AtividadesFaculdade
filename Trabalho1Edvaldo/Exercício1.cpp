@@ -7,23 +7,23 @@
 
 using namespace std;
 
-bool ValidarNota(float nota) {
-    return (nota >= 0 && nota <= 10);
+bool ValidarNota(float Nota) {
+    return (Nota >= 0 && Nota <= 10);
 }
 
 int main() {
-    float nota;
+    float Nota;
 
     do {
         cout << "Digite uma nota entre 0 e 10: ";
-        cin >> nota;
+        cin >> Nota;
 
-        if (!ValidarNota(nota)) {
+        if (!ValidarNota(Nota)) {
             cout << "Falso! (Nota invalida) Por favor tente novamente.\n";
         }
-    } while (!ValidarNota(nota));
+    } while (!ValidarNota(Nota));
 
-    cout << "Nota aceita! Ela foi: " << nota << endl;
+    cout << "Nota aceita! Ela foi: " << Nota << endl;
     cout << " \n Encerrando Programa"; 
 
     return 0;
