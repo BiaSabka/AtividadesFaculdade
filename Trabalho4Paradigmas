@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class RastroDeNomesJogo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] jogadores = new String[100]; 
+        int totalJogadores = 0; 
+
+        int opcao;
+
+        do {
+            System.out.println("\n====== MENU DO JOGO ======");
+            System.out.println("1. Criar Nick");
+            System.out.println("2. Logar no Jogo");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opcao: ");
+            opcao = scanner.nextInt();
+            scanner.nextLine(); 
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite o nick que deseja criar: ");
+                    String novoNick = scanner.nextLine();
+
+                    boolean existe = false;
+                    for (int i = 0; i < totalJogadores; i++) {
+                        if (jogadores[i].equalsIgnoreCase(novoNick)) {
+                            existe = true;
+                            break;
+                        }
+                    }
+
+                    if (existe) {
+                        System.out.println("Este nick ja existe! Tente outro.");
+                    } else {
+                        if (totalJogadores < jogadores.length) {
+                            jogadores[totalJogadores] = novoNick;
+                            totalJogadores++;
+                            System.out.println("Nick criado com sucesso!");
+                        } else {
+                            System.out.println("Limite de jogadores atingido!");
+                        }
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Digite seu nick para logar: ");
+                    String nickLogin = scanner.nextLine();
+
+                    boolean encontrado = false;
+                    for (int i = 0; i < totalJogadores; i++) {
+                        if (jogadores[i].equalsIgnoreCase(nickLogin)) {
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (encontrado) {
+                        System.out.println("Bem-vindo ao jogo, " + nickLogin + "! Iniciando...");
+                        return;
+                    } else {
+                        System.out.println("Nick nao encontrado. Crie uma conta primeiro:");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Saindo do jogo. Ate a proxima!");
+                    break;
+
+                default:
+                    System.out.println("Opcao invalida! Tente novamente.");
+            }
+
+        } while (opcao != 3);
+
+        scanner.close();
+    }
+}
