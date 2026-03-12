@@ -1,6 +1,6 @@
-//Utilizando o código desenvolvido em aula. Criar as seguintes funções:
+// Utilizando o código desenvolvido em aula. Criar as seguintes funções:
 // 1) Buscar um elemento na lista.
-//2) Remover um elemento da lista (Não é permitido "buracos" na lista").
+// 2) Remover um elemento da lista (Não é permitido "buracos" na lista").
 
 #include <iostream>
 
@@ -23,11 +23,9 @@ int buscar(REGISTRO lista[], int tamanho, int chave){
             return i;
         }
     }
-
     // caso não encontrar
     return -1;
 }
-
 
 // função para remover um elemento da lista
 void remover(REGISTRO lista[], int &tamanho, int chave){
@@ -52,7 +50,6 @@ void remover(REGISTRO lista[], int &tamanho, int chave){
 
     cout<<"Elemento removido com sucesso"<<endl;
 }
-
 
 int main() {
     
@@ -84,7 +81,6 @@ int main() {
         cout<<"Valor encontrado na posicao: "<<pos<<endl;
     }
 
-
     // perguntando ao usuário qual elemento quer remover
     cout<<"\nDigite um VALOR (nao posicao) para remover: ";
     cin>>valor;
@@ -99,5 +95,4 @@ int main() {
     for(int i = 0; i < tamanho; i++){
         cout<<lista[i].chave<<endl;
     }
-
 }
