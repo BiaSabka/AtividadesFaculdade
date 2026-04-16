@@ -30,7 +30,7 @@ int buscar(REGISTRO lista[], int tamanho, int chave){
 // função para remover um elemento da lista
 void remover(REGISTRO lista[], int &tamanho, int chave){
 
-    // buscamos o elemento
+    // busca o elemento
     int posicao = buscar(lista, tamanho, chave);
 
     // caso não econtrar
