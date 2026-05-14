@@ -54,14 +54,13 @@ void imprime(LISTA *l) {
     // começa pelo início
     NO *atual = l->inicio;
     
-    cout << "--- Itens na Lista (Tamanho: " << l->tam << ") ---" << endl;
+    cout << "Itens na Lista (Tamanho: " << l->tam << ")" << endl;
     
     // vai pulando de um em um até chegar no NULL
     while (atual != NULL) {
         cout << "Valor: " << atual->chave << endl;
         atual = atual->prox;
     }
-    cout << "---------------------------------" << endl;
 }
 
 int main() {
