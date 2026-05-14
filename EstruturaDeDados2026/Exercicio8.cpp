@@ -68,13 +68,8 @@ int main() {
     init(&minhaLista);
 
     // o último a ser inserido será o primeiro a aparecer
-    cout << "Inserindo o numero 10 no inicio..." << endl;
     insereInicio(&minhaLista, 10);
-    
-    cout << "Inserindo o numero 20 no inicio..." << endl;
     insereInicio(&minhaLista, 20);
-    
-    cout << "Inserindo o numero 30 no inicio...\n" << endl;
     insereInicio(&minhaLista, 30);
 
     imprime(&minhaLista);
