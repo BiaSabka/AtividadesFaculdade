@@ -10,7 +10,6 @@ def media(valores):
 
     return soma / len(valores)
 
-
 @njit(parallel=True)
 def covariancia(x, media_x, y, media_y):
     covar = 0.0
@@ -20,7 +19,6 @@ def covariancia(x, media_x, y, media_y):
 
     return covar
 
-
 @njit(parallel=True)
 def variancia(valores, media):
     soma = 0.0
@@ -29,7 +27,6 @@ def variancia(valores, media):
         soma += (valores[i] - media) ** 2
 
     return soma
-
 
 @njit
 def coef_regressao_linear(x, y):
@@ -41,8 +38,6 @@ def coef_regressao_linear(x, y):
 
     return b0, b1
 
-
-# exemplo de uso
 x = np.array([1, 2, 3, 4, 5], dtype=np.float64)
 y = np.array([2, 4, 6, 8, 10], dtype=np.float64)
 
