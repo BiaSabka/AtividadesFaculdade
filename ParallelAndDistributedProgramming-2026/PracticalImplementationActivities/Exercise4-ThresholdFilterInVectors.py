@@ -12,6 +12,7 @@
 #  be replaced with -1. After the change, use the comm.Gather() function to collect 
 #  the modified vector back into Rank 0 and print the complete modified vector.
 
+
 from mpi4py import MPI
 import numpy as np
 
