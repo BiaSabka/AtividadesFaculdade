@@ -38,5 +38,5 @@ if rank == 0:
 comm.Gather(local_grades, final_grades, root=0)
 
 if rank == 0:
-    print("Final Grades:")
+    print("Final Grades:") 
     print(final_grades)
